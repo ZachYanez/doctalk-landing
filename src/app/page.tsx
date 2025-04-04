@@ -1,103 +1,282 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div
+      style={{ marginTop: "80px" }}
+      className="min-h-screen bg-white flex flex-col"
+    >
+      {/* Hero Section */}
+      <section className="w-full bg-gray-50 pt-16 pb-32">
+        <div className="relative flex flex-col items-center">
+          <div className="w-48 h-48 mt-8">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/doctor.png"
+              alt="Friendly doctor cartoon"
+              width={192}
+              height={192}
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <h1 className="text-[120px] font-serif text-center mt-[-20px]">
+            <span style={{ color: "#FF4444" }}>Doc</span>
+            <span style={{ color: "#0077B6" }}>Talk</span>
+          </h1>
+          <p className="text-[28px] text-center max-w-[800px] text-gray-700 mt-[-60px]">
+            Your AI-powered medical assistant here to answer your questions
+            about lab results, diagnosis reports, treatment plans, and medical
+            records
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* Image Flow Section */}
+      <div className="w-full" style={{ marginBottom: "60px" }}>
+        <div
+          className="flex items-center justify-center"
+          style={{ gap: "120px" }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <div className="w-[343px] h-[458px] relative">
+            <Image
+              src="/images/resultScan.png"
+              alt="Medical result scan"
+              fill
+              className="rounded-[24px]"
+              style={{
+                objectFit: "cover",
+                border: "1px solid #e5e5e5",
+              }}
+              priority
+            />
+          </div>
+          <div className="text-[120px]">👉</div>
+          <div className="w-[343px] h-[458px] relative">
+            <Image
+              src="/images/conversationImage.png"
+              alt="AI conversation"
+              fill
+              className="rounded-[24px]"
+              style={{
+                objectFit: "cover",
+                border: "1px solid #e5e5e5",
+              }}
+              priority
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="w-full bg-gray-50">
+        <div className="max-w-[1200px] mx-auto px-8 py-32 mb-16">
+          <div className="relative">
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "40px",
+              }}
+            >
+              {/* Feature 1 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">🔍</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  UNDERSTAND ANY MEDICAL DOCUMENT
+                </h3>
+                <p className="mb-12">
+                  • Upload lab results, diagnosis reports, treatment plans, and
+                  medical records
+                </p>
+                <p className="mb-12">
+                  • Get clear, conversational explanations of complex medical
+                  terminology
+                </p>
+                <p className="mb-12">
+                  • Receive instant insights broken down into easy-to-understand
+                  language
+                </p>
+                <p>
+                  • Support for PDF documents, photos of printed documents, and
+                  direct camera captures
+                </p>
+              </div>
+
+              {/* Feature 2 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">💡</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  INTERACTIVE HEALTH CONVERSATIONS
+                </h3>
+                <p className="mb-12">
+                  • Ask follow-up questions about any part of your medical
+                  documents
+                </p>
+                <p className="mb-12">
+                  • Get detailed explanations of medical terms, procedures, and
+                  diagnoses
+                </p>
+                <p className="mb-12">
+                  • Explore &ldquo;what-if&rdquo; scenarios and treatment
+                  options
+                </p>
+                <p>• Understand potential side effects and interactions</p>
+              </div>
+
+              {/* Feature 3 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">📚</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  COMPREHENSIVE HEALTH KNOWLEDGE
+                </h3>
+                <p className="mb-12">
+                  • Ask general health questions beyond your documents
+                </p>
+                <p className="mb-12">
+                  • Learn about conditions, treatments, and preventive care
+                </p>
+                <p className="mb-12">
+                  • Get evidence-based information from reliable medical sources
+                </p>
+                <p>• Access a vast database of medical knowledge</p>
+              </div>
+
+              {/* Feature 4 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">🎯</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  ADVANCED RESEARCH MODE
+                </h3>
+                <p className="mb-12">
+                  • Toggle on Advanced Mode for deeper medical insights
+                </p>
+                <p className="mb-12">
+                  • Access detailed scientific explanations and research
+                  citations
+                </p>
+                <p className="mb-12">
+                  • Explore related medical studies and clinical trials
+                </p>
+                <p>
+                  • Understand the latest medical research relevant to your
+                  condition
+                </p>
+              </div>
+
+              {/* Feature 5 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">📱</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  USER-FRIENDLY FEATURES
+                </h3>
+                <p className="mb-12">
+                  • Intuitive interface designed for all age groups
+                </p>
+                <p className="mb-12">
+                  • Secure document storage and easy access to past
+                  conversations
+                </p>
+                <p className="mb-12">
+                  • Dark mode support for comfortable reading
+                </p>
+                <p>• Quick document scanning and processing</p>
+              </div>
+
+              {/* Feature 6 */}
+              <div
+                className="transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  padding: "32px",
+                }}
+              >
+                <div className="text-4xl text-center mb-4">🔒</div>
+                <h3 className="text-xl font-bold mb-8 text-center">
+                  PRIVACY & SECURITY
+                </h3>
+                <p className="mb-12">• Industry-standard security protocols</p>
+                <p className="mb-12">
+                  • No personal health information stored on our servers
+                </p>
+                <p className="mb-12">• Secure document processing</p>
+                <p>• End-to-end encrypted data transmission</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div
+        className="py-16 w-full"
+        style={{ marginTop: "100px", marginBottom: "200px" }}
+      >
+        <div
+          className="max-w-[600px] mx-auto text-center py-12 px-8 border-2 border-white"
+          style={{
+            background: "linear-gradient(135deg, #0077B6, #005b8c)",
+            borderRadius: "24px",
+            paddingBottom: "32px",
+            color: "white",
+          }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <h2 className="text-4xl font-bold mb-2" style={{ color: "white" }}>
+            Try DocTalk today.
+          </h2>
+          <p className="text-lg mb-6" style={{ color: "white" }}>
+            Understand your health one conversation at a time.
+          </p>
+          <button
+            className="bg-transparent py-2 px-8 rounded-full font-medium hover:bg-white hover:text-[#0077B6] border border-white mb-8"
+            style={{ color: "white" }}
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
