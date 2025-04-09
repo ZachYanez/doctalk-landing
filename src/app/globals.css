@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 42;
+  --background-end-rgb: 17, 24, 42;
 }
 
 @theme inline {
@@ -15,8 +16,8 @@
 }
 
 body {
-  background-color: white;
-  color: var(--foreground);
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
   font-family: var(--font-sans);
 }
 
@@ -25,10 +26,17 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: white;
 }
 
 main {
   min-height: 100vh;
-  background-color: white;
+}
+
+/* Privacy policy specific styles */
+.privacy-policy-page,
+.privacy-policy-page body,
+.privacy-policy-page main,
+.privacy-policy-page html {
+  background-color: #11182A !important;
+  color: white !important;
 }
