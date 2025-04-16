@@ -15,16 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DocTalk - Medical Assistant",
+  title: "DocTalk - Your AI Medical Assistant",
   description:
-    "Your AI-powered medical assistant for understanding medical documents",
+    "DocTalk helps you understand medical documents and health information through AI-powered conversations.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body
