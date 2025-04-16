@@ -6,7 +6,10 @@ export default function Home() {
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ backgroundColor: "#11182A" }}
+      style={{
+        background:
+          "linear-gradient(to bottom, #000000 0%, #11182A 40%, #03045e 70%, #0077B6 100%)",
+      }}
     >
       {/* Hero Section */}
       <section className="w-full pt-8 pb-32" style={{ marginTop: "100px" }}>
@@ -63,7 +66,7 @@ export default function Home() {
             >
               Step 1: Take a Picture or Upload Photo
             </p>
-            <div className="w-[377px] h-[504px] relative">
+            <div className="w-[377px] h-[504px] relative transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]">
               <Image
                 src="/images/resultScan.png"
                 alt="Medical result scan"
@@ -85,7 +88,7 @@ export default function Home() {
             >
               Step 2: Begin Your Conversation
             </p>
-            <div className="w-[377px] h-[504px] relative">
+            <div className="w-[377px] h-[504px] relative transform transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,119,182,0.3)]">
               <Image
                 src="/images/conversationImage.png"
                 alt="AI conversation"
