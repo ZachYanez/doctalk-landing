@@ -1,237 +1,196 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link"; // Removed unused import
 import { useEffect } from "react";
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyPage() {
   useEffect(() => {
-    // Force background color on all elements
-    document.body.style.backgroundColor = "#11182A";
-    document.documentElement.style.backgroundColor = "#11182A";
-    document.body.style.color = "white";
-
+    // This effect can be removed if not needed, but kept for potential future use
+    document.body.style.backgroundColor = "#11182A"; // Ensure body background matches
     return () => {
-      document.body.style.backgroundColor = "";
-      document.documentElement.style.backgroundColor = "";
-      document.body.style.color = "";
+      document.body.style.backgroundColor = ""; // Reset on unmount
     };
   }, []);
 
   return (
     <div
+      className="container mx-auto py-12 text-white"
       style={{
         backgroundColor: "#11182A",
-        color: "white",
-        minHeight: "100vh",
-        width: "100%",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        paddingLeft: "32px",
+        paddingRight: "32px",
       }}
     >
-      <main
-        style={{
-          maxWidth: "1000px",
-          margin: "0 auto",
-          padding: "40px 20px",
-          backgroundColor: "#11182A",
-        }}
-      >
-        <Link
-          href="/"
-          style={{
-            color: "white",
-            marginBottom: "30px",
-            display: "inline-block",
-            fontSize: "18px",
-          }}
-        >
-          &larr; Back to Home
-        </Link>
+      <h1 className="text-3xl font-bold mb-6">DocTalk Privacy Policy</h1>
+      <p className="mb-4">
+        <strong>Effective Date:</strong> June 12, 2024
+      </p>
 
-        <h1
-          style={{
-            fontSize: "48px",
-            fontWeight: "bold",
-            textAlign: "center",
-            margin: "40px 0",
-            color: "white",
-          }}
-        >
-          Privacy Policy
-        </h1>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">1. Introduction</h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`Welcome to DocTalk ("we," "us," or "our"). We are committed to protecting your privacy and handling your personal information with transparency and care. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, DocTalk (the "App").
 
-        <div style={{ backgroundColor: "#11182A", color: "white" }}>
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.6,
-              marginBottom: "24px",
-              color: "white",
-            }}
-          >
-            We collect and process medical documents and information that you
-            voluntarily provide through our app. This includes:
-          </p>
+By using the App, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this policy, please do not access or use the App.`}
+      </p>
+      <p className="mb-4 font-semibold italic whitespace-pre-line">
+        {`Please Note: DocTalk provides AI-powered information and analysis based on the documents and questions you provide. It is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Use of the App does not establish a doctor-patient relationship. You are solely responsible for the information you choose to share with the App.`}
+      </p>
 
-          <ul style={{ marginBottom: "32px", paddingLeft: "24px" }}>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              Medical documents and images you upload
-            </li>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              Chat conversations with our AI assistant
-            </li>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              Account information (name, email)
-            </li>
-          </ul>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        2. Information We Collect
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`We collect information that you provide directly to us, information generated during your use of the App, and technical information about your device.
 
-          <h2
-            style={{
-              fontSize: "32px",
-              fontWeight: "bold",
-              margin: "40px 0 20px",
-              color: "white",
-            }}
-          >
-            How We Use Your Information
-          </h2>
+Account Information:
+• User Identifier: A unique ID associated with your account (e.g., generated by our system or linked to your authentication method).
+• Authentication Credentials: Information used for login (potentially email/password if implemented, or identifiers from third-party providers like Apple).
+• Subscription Status: Information about your current subscription plan (e.g., Basic, Standard, Premium), including purchase history identifiers relevant for validation.
 
-          <ul style={{ marginBottom: "32px", paddingLeft: "24px" }}>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              To provide AI-powered analysis of your medical documents
-            </li>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              To maintain and improve our services
-            </li>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              To communicate with you about your account
-            </li>
-            <li
-              style={{
-                fontSize: "18px",
-                lineHeight: 1.6,
-                marginBottom: "8px",
-                color: "white",
-              }}
-            >
-              To ensure the security of our services
-            </li>
-          </ul>
+Health Information and Documents You Provide:
+• Chat Messages: Text queries, questions, and conversation content you type into the chat interface.
+• Uploaded Documents: Medical documents, images, lab results, or other files (e.g., PDFs, JPEGs, PNGs) you choose to upload for analysis or discussion. This may contain sensitive Personal Health Information (PHI). We rely on you to only upload information you are comfortable sharing and have the right to share.
+• Document Content Analysis: Information extracted or inferred from your uploaded documents during the AI analysis process.
 
-          <h2
-            style={{
-              fontSize: "32px",
-              fontWeight: "bold",
-              margin: "40px 0 20px",
-              color: "white",
-            }}
-          >
-            Data Security
-          </h2>
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.6,
-              marginBottom: "24px",
-              color: "white",
-            }}
-          >
-            We implement industry-standard security measures to protect your
-            sensitive medical information. All data is encrypted in transit and
-            at rest.
-          </p>
+Conversation Data:
+• Chat History: Records of your conversations with the AI, including your messages and the AI's responses.
+• Citations: References provided by the AI in its responses.
+• Archived Conversations: Saved conversations including messages and associated document identifiers (URLs).
 
-          <h2
-            style={{
-              fontSize: "32px",
-              fontWeight: "bold",
-              margin: "40px 0 20px",
-              color: "white",
-            }}
-          >
-            Data Retention
-          </h2>
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: 1.6,
-              marginBottom: "24px",
-              color: "white",
-            }}
-          >
-            We retain your information only for as long as necessary to provide
-            our services and comply with legal obligations.
-          </p>
-        </div>
+Subscription and Purchase Information:
+• Product Identifiers: The specific subscription product IDs (SKUs) you attempt to purchase or have purchased (e.g., com.doctalk.ai.subscription.standard).
+• Transaction Receipts: Encrypted receipts provided by the relevant application store upon purchase. These are sent to our backend solely for validation with the application store provider and are not used for other purposes. We do not collect or store your full credit card number or other sensitive payment details. Payment processing is handled entirely by the application store provider.
 
-        <div
-          style={{
-            marginTop: "60px",
-            paddingTop: "20px",
-            borderTop: "1px solid #2563EB",
-            backgroundColor: "#11182A",
-          }}
-        >
-          <p style={{ fontSize: "18px", color: "white" }}>
-            Last Updated: {new Date().toLocaleDateString()}
-          </p>
-        </div>
+Usage Data:
+• Query Counts: Tracking the number of messages sent to manage subscription limits.
+• Feature Usage: Information on how you interact with App features (e.g., use of Text-to-Speech, Advanced Research Mode, document uploads, archiving).
+• Interaction Data: Logs related to successful or failed operations within the App (e.g., purchase attempts, analysis requests).
 
-        <div
-          style={{
-            marginTop: "40px",
-            textAlign: "center",
-            backgroundColor: "#11182A",
-          }}
-        >
-          <p style={{ fontSize: "18px", color: "white" }}>© ZY MGMT CO 2025</p>
-        </div>
-      </main>
+Technical Information:
+• Device Information: Device type, operating system (iOS) and version, device identifiers (as permitted by the platform).
+• App Version: The version of the DocTalk App you are using.
+• IP Address: Your IP address may be logged by our backend servers or third-party services for security and operational purposes.
+• Crash Reports & Diagnostics: Information related to app crashes or performance issues to help us identify and fix bugs.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        3. How We Use Your Information
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`We use the information we collect for various purposes, including:
+
+To Provide and Operate the App:
+• Authenticate your access.
+• Process your queries and provide AI responses.
+• Analyze uploaded documents as requested.
+• Enable Text-to-Speech functionality.
+• Manage your subscription status and enforce limits.
+• Store and retrieve your conversation history and archived conversations.
+• Process and validate in-app purchases with the application store provider.
+
+To Improve and Maintain the App:
+• Understand usage patterns to enhance user experience and features.
+• Diagnose and fix technical problems and bugs.
+• Develop new features and functionalities.
+
+To Ensure Security and Compliance:
+• Monitor for and prevent fraudulent or unauthorized activity.
+• Enforce our Terms of Service and this Privacy Policy.
+• Comply with legal obligations.
+
+To Communicate with You (Rarely):
+• Potentially send important notices regarding your account, subscription, or critical updates to the App or policies (we anticipate minimal direct communication).`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        4. How We Share Your Information
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`We do not sell your personal information. We may share your information with third-party service providers and partners who perform services on our behalf, or as required by law, under the following circumstances:
+
+• AI Service Provider(s): Your chat messages and potentially the content of uploaded documents (depending on the specific analysis requested) are shared with our third-party AI provider(s) to generate responses and perform analysis. These providers have their own privacy policies governing their use of data. We aim to minimize the data shared to what is necessary for the service.
+• Application Store Provider: Transaction receipts are shared with the relevant application store provider via our backend for the sole purpose of validating your in-app purchases and managing your subscription status.
+• Backend Hosting Provider: Our backend infrastructure, which processes requests and stores data like user accounts, conversation history, and validated subscription status, is hosted by a third-party backend hosting provider.
+• Cloud Storage Provider: Your uploaded documents (images, PDFs) are stored with our cloud storage provider. Access is controlled via secure URLs linked to your conversations.
+• Analytics Providers: We may use third-party analytics providers to understand App usage. This data is typically aggregated and anonymized where possible.
+• Legal Requirements: We may disclose your information if required by law, subpoena, or other legal process, or if we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.
+• Business Transfers: In the event of a merger, acquisition, reorganization, bankruptcy, or sale of all or a portion of our assets, your information may be transferred as part of that transaction. We will notify you via prominent notice within the App or via email (if available) of any change in ownership or uses of your personal information.
+
+We take steps to ensure that any third-party service providers with access to your information are obligated to protect it and use it only for the purposes for which it was disclosed.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        5. Data Storage and Security
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`Protecting your privacy and the security of your information is a top priority at DocTalk. We are deeply committed to safeguarding the data you entrust to us, including your conversations and any documents or images you upload.
+
+To achieve this, we employ a comprehensive, multi-layered security strategy designed to protect your information at all stages. This includes:
+
+• Secure Transmission: We utilize robust security measures, including industry-standard encryption for data in transit, to protect your information as it travels between your device and our servers.
+• Protected Storage: We implement significant technical safeguards to protect your data when it is stored on our systems. This involves multiple layers of security, including encryption and access controls, designed to prevent unauthorized access or disclosure.
+• Operational Safeguards: Access to user data is strictly limited to authorized personnel who require it for operational purposes, and we maintain administrative and technical controls to enforce this.
+• Secure Infrastructure: We utilize reputable cloud hosting and storage providers with strong security practices.
+• Continuous Improvement: The digital landscape is constantly evolving, and so are our security practices. We continuously review, update, and enhance our security measures to address emerging threats and incorporate advancements in security technology.
+
+While no system can be guaranteed to be 100% secure, we invest significant resources and effort into maintaining robust security measures appropriate to the sensitivity of the information we handle. Our goal is to provide a secure environment where you can confidently use DocTalk, knowing that strong protections are in place for your data.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">6. Data Retention</h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. This includes:
+
+• Account Information: Retained for as long as your account is active.
+• Conversation Data & Uploaded Documents: Retained until you delete the conversation, request account deletion, or the conversation is otherwise removed according to our data management practices. Archived conversations are retained until deleted by you or upon account deletion.
+• Subscription Data: Retained as long as necessary to manage your subscription status and for historical validation purposes.
+
+Upon account deletion request, we will take reasonable steps to delete your personal information, subject to any legal or operational requirements to retain certain data (e.g., anonymized usage data, legally required records).`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        7. Your Rights and Choices
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`Depending on your jurisdiction, you may have certain rights regarding your personal information:
+
+• Access: You may have the right to request access to the personal information we hold about you.
+• Correction: You may have the right to request correction of inaccurate personal information. (Note: Correcting conversation history or AI analysis content may not be feasible; deletion is often the primary mechanism).
+• Deletion: You have the right to delete individual archived conversations within the App. You also have the right to request the deletion of your entire account and associated data by contacting us at zy@zymgmtco.com. Please note that deleting your account is irreversible and will result in the loss of all your conversation history and active subscriptions associated with that account.
+• Manage Uploads: You control which documents you upload. Deleting a conversation containing documents will typically trigger the deletion of the associated stored files.
+• Manage Permissions: You can manage App permissions (like camera or photo library access) through your device's settings.
+• In-App Purchases: Subscription management (cancellation, renewals) is handled through your application store account settings.
+
+To exercise applicable rights, please contact us at zy@zymgmtco.com. We will respond to your request in accordance with applicable law.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        8. Children&apos;s Privacy
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`The App is not intended for use by children under the age of 13 (or the relevant age of consent in your jurisdiction). We do not knowingly collect personal information from children under this age. If we become aware that we have collected personal information from a child without verification of parental consent, we will take steps to remove that information from our servers.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        9. International Data Transfers
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction. Our servers and third-party service providers (like AI providers, hosting) are primarily located in the United States. By using the App, you consent to this transfer.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">
+        10. Changes to This Privacy Policy
+      </h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App and updating the "Effective Date" at the top. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted. Your continued use of the App after the effective date of the revised policy constitutes your acceptance of the changes.`}
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">11. Contact Us</h2>
+      <p className="mb-4 whitespace-pre-line">
+        {`If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
+
+ZY MGMT Co
+zy@zymgmtco.com`}
+      </p>
     </div>
   );
 }
