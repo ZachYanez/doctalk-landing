@@ -123,17 +123,32 @@ We take steps to ensure that any third-party service providers with access to yo
         5. Data Storage and Security
       </h2>
       <p className="mb-4 whitespace-pre-line">
-        {`Protecting your privacy and the security of your information is a top priority at DocTalk. We are deeply committed to safeguarding the data you entrust to us, including your conversations and any documents or images you upload.
+        {`At DocTalk, we implement a comprehensive, multi-layered security architecture designed to protect your sensitive information throughout its lifecycle. Our security measures include:
 
-To achieve this, we employ a comprehensive, multi-layered security strategy designed to protect your information at all stages. This includes:
+Data Encryption:
+• Transport Layer Security: All data transmitted between your device and our servers is protected using industry-standard encryption protocols.
+• At-Rest Encryption: Your sensitive data, including messages and documents, is encrypted when stored using advanced encryption standards.
+• Unique Encryption Keys: Each piece of sensitive data is encrypted with its own unique key, ensuring compartmentalized security.
 
-• Secure Transmission: We utilize robust security measures, including industry-standard encryption for data in transit, to protect your information as it travels between your device and our servers.
-• Protected Storage: We implement significant technical safeguards to protect your data when it is stored on our systems. This involves multiple layers of security, including encryption and access controls, designed to prevent unauthorized access or disclosure.
-• Operational Safeguards: Access to user data is strictly limited to authorized personnel who require it for operational purposes, and we maintain administrative and technical controls to enforce this.
-• Secure Infrastructure: We utilize reputable cloud hosting and storage providers with strong security practices.
-• Continuous Improvement: The digital landscape is constantly evolving, and so are our security practices. We continuously review, update, and enhance our security measures to address emerging threats and incorporate advancements in security technology.
+Access Controls:
+• Multi-Factor Authentication: Administrative access to backend systems requires multiple forms of verification.
+• Role-Based Access Control (RBAC): System access is strictly limited based on job function and necessity.
+• Regular Access Reviews: We conduct periodic reviews of access permissions to ensure they remain appropriate.
 
-While no system can be guaranteed to be 100% secure, we invest significant resources and effort into maintaining robust security measures appropriate to the sensitivity of the information we handle. Our goal is to provide a secure environment where you can confidently use DocTalk, knowing that strong protections are in place for your data.`}
+Infrastructure Security:
+• Secure Cloud Infrastructure: We utilize enterprise-grade cloud providers with extensive security certifications.
+• Network Segmentation: Our infrastructure is organized into separate security zones with controlled access between them.
+• Regular Security Updates: Systems are kept up-to-date with security patches and updates.
+
+Monitoring and Incident Response:
+• 24/7 System Monitoring: Automated systems monitor for suspicious activity or potential security threats.
+• Incident Response Plan: We maintain and regularly update procedures for responding to potential security incidents.
+• Regular Security Assessments: We conduct periodic security reviews and assessments of our systems.
+
+Data Protection:
+• Secure Document Storage: Uploaded documents are stored with enterprise-grade security controls.
+• Automated Backup Systems: Critical data is regularly backed up with encryption.
+• Data Retention Controls: Automated systems enforce data retention policies.`}
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-3">6. Data Retention</h2>
@@ -143,6 +158,7 @@ While no system can be guaranteed to be 100% secure, we invest significant resou
 • Account Information: Retained for as long as your account is active.
 • Conversation Data & Uploaded Documents: Retained until you delete the conversation, request account deletion, or the conversation is otherwise removed according to our data management practices. Archived conversations are retained until deleted by you or upon account deletion.
 • Subscription Data: Retained as long as necessary to manage your subscription status and for historical validation purposes.
+• Encryption Keys: Securely stored for as long as needed to access your encrypted data, and securely destroyed when no longer needed.
 
 Upon account deletion request, we will take reasonable steps to delete your personal information, subject to any legal or operational requirements to retain certain data (e.g., anonymized usage data, legally required records).`}
       </p>
@@ -174,7 +190,12 @@ To exercise applicable rights, please contact us at zy@zymgmtco.com. We will res
         9. International Data Transfers
       </h2>
       <p className="mb-4 whitespace-pre-line">
-        {`Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction. Our servers and third-party service providers (like AI providers, hosting) are primarily located in the United States. By using the App, you consent to this transfer.`}
+        {`Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction. Our servers and third-party service providers (like AI providers, hosting) are primarily located in the United States. By using the App, you consent to this transfer.
+
+When transferring data internationally, we implement appropriate safeguards:
+• Data Transfer Agreements: We use appropriate data transfer mechanisms where required.
+• Encryption in Transit: Data is encrypted during international transfers.
+• Security Standards: We ensure receiving parties maintain appropriate security standards.`}
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-3">
