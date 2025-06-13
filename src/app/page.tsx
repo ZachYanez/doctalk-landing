@@ -1,35 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import DesktopLayout from "../components/DesktopLayout";
-import MobileLayout from "../components/MobileLayout";
-import useMediaQuery from "../hooks/useMediaQuery";
+import Image from "next/image";
 
 export default function Home() {
-<<<<<<< HEAD
-  // Breakpoint for switching layouts (e.g., Tailwind's lg breakpoint)
-  const isMobile = useMediaQuery("(max-width: 1023px)");
-
-  // State to track if component has mounted on the client
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    // Set isClient to true once the component mounts
-    setIsClient(true);
-  }, []);
-
-  // Avoid rendering layout based on hook during SSR or initial client render
-  // This prevents hydration mismatch errors
-  if (!isClient) {
-    // Render the default (Desktop) layout or a placeholder during SSR/initial load
-    // Returning the default layout is often preferred to avoid layout shifts
-    return <DesktopLayout />;
-  }
-
-  // Once mounted, render the correct layout based on screen size
-  return isMobile ? <MobileLayout /> : <DesktopLayout />;
-=======
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -386,5 +359,4 @@ export default function Home() {
       </div>
     </div>
   );
->>>>>>> 4983a4442e0f476e9c70bf0f9815ce8879458db6
 }
