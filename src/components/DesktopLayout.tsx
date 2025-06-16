@@ -340,6 +340,15 @@ export default function DesktopLayout() {
               priority
             />
           </div>
+          <p className="text-[20px] mt-6" style={{ color: "white" }}>
+            If you have any questions, please email:{" "}
+            <a
+              href="mailto:zy@zymgmtco.com"
+              className="underline hover:text-[#0077B6] transition-colors"
+            >
+              zy@zymgmtco.com
+            </a>
+          </p>
         </div>
       </div>
 
