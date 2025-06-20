@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
     >
       <h1 className="text-3xl font-bold mb-6">DocTalk Privacy Policy</h1>
       <p className="mb-4">
-        <strong>Effective Date:</strong> June 12, 2024
+        <strong>Effective Date:</strong> June 19, 2025
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-3">1. Introduction</h2>
@@ -125,6 +125,16 @@ We take steps to ensure that any third-party service providers with access to yo
       <p className="mb-4 whitespace-pre-line">
         {`At DocTalk, we implement a comprehensive, multi-layered security architecture designed to protect your sensitive information throughout its lifecycle. Our security measures include:
 
+Frontend Security:
+• Secure Storage: We use expo-secure-store to encrypt sensitive data stored on your device, including:
+  - Authentication tokens
+  - User data
+  - Chat preferences
+• Session Management: Automatic session tracking and monitoring of login times
+• Input Validation: All user inputs are validated before being sent to our servers
+• Protected Navigation: Secure navigation flows prevent unauthorized access to protected screens
+• Clean Session Termination: Automatic cleanup of sensitive data on logout
+
 Data Encryption:
 • Transport Layer Security: All data transmitted between your device and our servers is protected using industry-standard encryption protocols.
 • At-Rest Encryption: Your sensitive data, including messages and documents, is encrypted when stored using advanced encryption standards.
@@ -148,7 +158,16 @@ Monitoring and Incident Response:
 Data Protection:
 • Secure Document Storage: Uploaded documents are stored with enterprise-grade security controls.
 • Automated Backup Systems: Critical data is regularly backed up with encryption.
-• Data Retention Controls: Automated systems enforce data retention policies.`}
+• Data Retention Controls: Automated systems enforce data retention policies.
+
+Important Note About AI Models:
+It's important to understand that among our AI services, only the Google Gemini Flash-2.0 vision model, used specifically for document analysis, has the capability to process and potentially associate users with their medical information. All other AI interactions are designed to be contextual without maintaining user associations. We implement strict security measures and data handling protocols to protect any information processed by these models.
+
+Authentication and Authorization:
+• Token-based Authentication: We use JSON Web Tokens (JWT) for secure authentication
+• Password Requirements: Strong password policies requiring minimum 8 characters, at least 1 uppercase letter, and 1 special character
+• Protected Routes: All sensitive operations require valid authentication tokens
+• Automatic Session Validation: Tokens are validated on app startup and with each protected request`}
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-3">6. Data Retention</h2>
