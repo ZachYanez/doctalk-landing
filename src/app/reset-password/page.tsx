@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
-export default function ResetPasswordPage() {
-  const [token, setToken] = useState<string>("");
+export default function ResetPassword() {
+  const [token, setToken] = useState<string | null>(null);
+  const pathname = usePathname();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,14 +15,20 @@ export default function ResetPasswordPage() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Get token from sessionStorage (set by our script in layout.tsx)
+    // First try to get token from URL path
+    const pathToken = pathname?.split("/reset-password/")[1];
+    if (pathToken) {
+      setToken(pathToken);
+      return;
+    }
+
+    // Fallback to sessionStorage if token was stored there
     const storedToken = sessionStorage.getItem("resetToken");
     if (storedToken) {
       setToken(storedToken);
-      // Clear token from sessionStorage to prevent reuse
-      sessionStorage.removeItem("resetToken");
+      sessionStorage.removeItem("resetToken"); // Clear it after use
     }
-  }, []);
+  }, [pathname]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

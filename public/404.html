@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DocTalk - Redirecting...</title>
+    <script>
+      // Extract the path and redirect to home with it as a parameter
+      (function() {
+        var path = window.location.pathname;
+        if (path.includes('/reset-password/')) {
+          var token = path.split('/reset-password/')[1];
+          if (token) {
+            sessionStorage.setItem('resetToken', token);
+            window.location.href = '/reset-password';
+            return;
+          }
+        }
+        // If no match, redirect to home
+        window.location.href = '/';
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html> 
