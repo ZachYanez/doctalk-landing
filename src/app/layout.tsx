@@ -29,21 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function() {
-              const path = window.location.hash.substring(1);
-              if (path.startsWith('/reset-password/')) {
-                const token = path.split('/reset-password/')[1];
-                sessionStorage.setItem('resetToken', token);
-              }
-            })();
-          `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
