@@ -40,9 +40,9 @@ export default function VerifyPage() {
 
       try {
         const response = await fetch(
-          `${API_URL}/api/auth/verify-email/${token}`,
+          `${API_URL}/api/auth/verify-email?token=${encodeURIComponent(token)}`,
           {
-            method: "POST", // Ensure we're using POST
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
