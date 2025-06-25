@@ -2,48 +2,34 @@
 
 import { useEffect, useState } from "react";
 
-import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
-
 export default function ResetPassword() {
   const [token, setToken] = useState<string | null>(null);
-  const pathname = usePathname();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // First try to get token from URL path
-    const pathToken = pathname?.split("/reset-password/")[1];
-    if (pathToken) {
-      setToken(pathToken);
-      return;
-    }
-
-    // Fallback to sessionStorage if token was stored there
+    // Get token from sessionStorage
     const storedToken = sessionStorage.getItem("resetToken");
     if (storedToken) {
       setToken(storedToken);
-      sessionStorage.removeItem("resetToken"); // Clear it after use
+      // Clear it after use
+      sessionStorage.removeItem("resetToken");
     }
-  }, [pathname]);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
-    setIsLoading(true);
+    setError(null);
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      setIsLoading(false);
+    if (!token) {
+      setError("Invalid or expired reset token");
       return;
     }
 
-    if (password.length < 8) {
-      setError("Password must be at least 8 characters long");
-      setIsLoading(false);
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
       return;
     }
 
@@ -62,43 +48,21 @@ export default function ResetPassword() {
         }
       );
 
-      const data = await response.json();
-
-      if (data.success) {
-        setSuccess(true);
-        // Clear form
-        setPassword("");
-        setConfirmPassword("");
-        // Clear token from storage
-        sessionStorage.removeItem("resetToken");
-      } else {
-        // Handle specific error messages from API
-        switch (response.status) {
-          case 400:
-            setError(data.message); // "Token and new password are required" or "Invalid or expired reset token"
-            break;
-          case 404:
-            setError("User not found");
-            break;
-          case 500:
-            setError("Error resetting password");
-            break;
-          default:
-            setError(data.message || "Failed to reset password");
-        }
+      if (!response.ok) {
+        throw new Error("Failed to reset password");
       }
+
+      setSuccess(true);
     } catch {
-      setError("Network error occurred");
-    } finally {
-      setIsLoading(false);
+      setError("Failed to reset password. Please try again.");
     }
   };
 
   if (!token) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white p-4">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="flex min-h-screen flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
+          <h1 className="mb-6 text-2xl font-bold text-gray-900">
             Invalid Reset Link
           </h1>
           <p className="text-gray-600">
@@ -110,78 +74,69 @@ export default function ResetPassword() {
     );
   }
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-white p-4">
-      <div className="max-w-md w-full space-y-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Reset Your Password
+  if (success) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
+          <h1 className="mb-6 text-2xl font-bold text-green-600">
+            Password Reset Successful!
           </h1>
-          <p className="mt-2 text-gray-600">
-            Please enter your new password below
+          <p className="text-gray-600">
+            Your password has been successfully reset. You can now log in with
+            your new password.
           </p>
         </div>
+      </div>
+    );
+  }
 
-        {success ? (
-          <div className="bg-green-50 p-4 rounded-md">
-            <p className="text-green-800 text-center">
-              Password successfully reset! You can now log in with your new
-              password.
-            </p>
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center p-4">
+      <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
+        <h1 className="mb-6 text-2xl font-bold text-gray-900">
+          Reset Your Password
+        </h1>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label
+              htmlFor="password"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              New Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none"
+              required
+            />
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-            <div className="space-y-4">
-              <div>
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  New Password
-                </label>
-                <input
-                  id="password"
-                  type="password"
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  minLength={8}
-                  placeholder="Enter your new password"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="confirmPassword"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  id="confirmPassword"
-                  type="password"
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  minLength={8}
-                  placeholder="Confirm your new password"
-                />
-              </div>
-            </div>
-
-            {error && (
-              <div className="bg-red-50 p-4 rounded-md">
-                <p className="text-red-800 text-sm">{error}</p>
-              </div>
-            )}
-
-            <Button type="submit" className="w-full" disabled={isLoading}>
-              {isLoading ? "Resetting Password..." : "Reset Password"}
-            </Button>
-          </form>
-        )}
+          <div className="mb-6">
+            <label
+              htmlFor="confirmPassword"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              Confirm New Password
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none"
+              required
+            />
+          </div>
+          {error && <p className="mb-4 text-sm text-red-600">{error}</p>}
+          <button
+            type="submit"
+            className="w-full rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none"
+          >
+            Reset Password
+          </button>
+        </form>
       </div>
     </div>
   );
