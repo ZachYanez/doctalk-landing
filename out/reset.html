@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resetting Password - DocTalk</title>
+  <script>
+    function handleReset() {
+      console.log('Reset handler running');
+      // Get the token from the URL
+      const token = window.location.pathname.split('/reset-password/')[1] || 
+                   window.location.hash.substring(1).split('/reset-password/')[1];
+      
+      if (token) {
+        console.log('Token found:', token);
+        // Store the token
+        sessionStorage.setItem('resetToken', token);
+        // Redirect to the reset password page
+        window.location.href = '/reset-password';
+      } else {
+        console.log('No token found');
+        // Redirect to home if no token
+        window.location.href = '/';
+      }
+    }
+  </script>
+</head>
+<body onload="handleReset()">
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <p>Redirecting to password reset...</p>
+  </div>
+</body>
+</html> 
