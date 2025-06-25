@@ -4,9 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // This is needed for GitHub Pages
   basePath: "",
-  assetPrefix: "",
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
