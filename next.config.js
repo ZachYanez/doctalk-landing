@@ -5,7 +5,10 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: "",
-  trailingSlash: true,
+  assetPrefix: "",
+  // Enable middleware for static exports
+  skipMiddlewareUrlNormalize: true,
+  skipTrailingSlashRedirect: true,
 };
 
 module.exports = nextConfig;

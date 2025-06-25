@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
       response.cookies.set("resetToken", token, {
         httpOnly: true,
         secure: true,
-        sameSite: "strict",
+        sameSite: "lax",
         maxAge: 3600, // 1 hour
       });
 
@@ -29,5 +29,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/verify"],
+  matcher: [
+    // Match reset-password URLs with tokens
+    "/reset-password/:token*",
+  ],
 };
