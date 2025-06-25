@@ -10,12 +10,17 @@ export default function ResetPassword() {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    // Get token from sessionStorage
-    const storedToken = sessionStorage.getItem("resetToken");
-    if (storedToken) {
-      setToken(storedToken);
-      // Clear it after use
-      sessionStorage.removeItem("resetToken");
+    // Get token from cookie
+    const cookieToken = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("resetToken="))
+      ?.split("=")[1];
+
+    if (cookieToken) {
+      setToken(cookieToken);
+      // Clear the cookie after getting the token
+      document.cookie =
+        "resetToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
   }, []);
 
