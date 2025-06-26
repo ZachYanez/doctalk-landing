@@ -161,7 +161,7 @@ Data Protection:
 • Data Retention Controls: Automated systems enforce data retention policies.
 
 Important Note About AI Models:
-It's important to understand that among our AI services, only the Google Gemini Flash-2.0 vision model, used specifically for document analysis, has the capability to process and potentially associate users with their medical information. All other AI interactions are designed to be contextual without maintaining user associations. We implement strict security measures and data handling protocols to protect any information processed by these models.
+It's important to understand that among our AI services, only the Google Gemini Flash-2.5 vision model, used specifically for document analysis, has the capability to process and potentially associate users with their medical information. All other AI interactions are designed to be contextual without maintaining user associations. We implement strict security measures and data handling protocols to protect any information processed by these models.
 
 Authentication and Authorization:
 • Token-based Authentication: We use JSON Web Tokens (JWT) for secure authentication
@@ -190,12 +190,12 @@ Upon account deletion request, we will take reasonable steps to delete your pers
 
 • Access: You may have the right to request access to the personal information we hold about you.
 • Correction: You may have the right to request correction of inaccurate personal information. (Note: Correcting conversation history or AI analysis content may not be feasible; deletion is often the primary mechanism).
-• Deletion: You have the right to delete individual archived conversations within the App. You also have the right to request the deletion of your entire account and associated data by contacting us at zy@zymgmtco.com. Please note that deleting your account is irreversible and will result in the loss of all your conversation history and active subscriptions associated with that account.
+• Deletion: You have the right to delete individual archived conversations within the App. You also have the right to request the deletion of your entire account and associated data by contacting us at doctalk@zymgmtco.com. Please note that deleting your account is irreversible and will result in the loss of all your conversation history and active subscriptions associated with that account.
 • Manage Uploads: You control which documents you upload. Deleting a conversation containing documents will typically trigger the deletion of the associated stored files.
 • Manage Permissions: You can manage App permissions (like camera or photo library access) through your device's settings.
 • In-App Purchases: Subscription management (cancellation, renewals) is handled through your application store account settings.
 
-To exercise applicable rights, please contact us at zy@zymgmtco.com. We will respond to your request in accordance with applicable law.`}
+To exercise applicable rights, please contact us at doctalk@zymgmtco.com. We will respond to your request in accordance with applicable law.`}
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-3">
@@ -229,7 +229,7 @@ When transferring data internationally, we implement appropriate safeguards:
         {`If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
 
 ZY MGMT Co
-zy@zymgmtco.com`}
+doctalk@zymgmtco.com`}
       </p>
     </div>
   );

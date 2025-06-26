@@ -1,18 +1,11 @@
 import "./globals.css";
 
-import { Geist, Geist_Mono } from "next/font/google";
-
 import GitHubPagesRedirect from "@/components/GitHubPagesRedirect";
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 
-const geistSans = Geist({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -29,11 +22,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.className} antialiased`}>
         <GitHubPagesRedirect />
         {children}
+        <footer
+          style={{
+            textAlign: "center",
+            padding: "1rem",
+            backgroundColor: "#001f3f",
+            color: "white",
+          }}
+        >
+          <p style={{ fontSize: "0.875rem" }}>
+            <a
+              href="/privacy-policy"
+              style={{ color: "#0077B6", textDecoration: "underline" }}
+            >
+              Privacy Policy
+            </a>
+          </p>
+        </footer>
       </body>
     </html>
   );

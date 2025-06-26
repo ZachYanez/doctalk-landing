@@ -1,9 +1,11 @@
+import React from "react";
+
 export const metadata = {
-  title: "Email Verified - DocTalk",
-  description: "Email verification success page for DocTalk",
+  title: "Reset Password - DocTalk",
+  description: "Reset your DocTalk password",
 };
 
-export default function VerifiedLayout({
+export default function ResetPasswordLayout({
   children,
 }: {
   children: React.ReactNode;

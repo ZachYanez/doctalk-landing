@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   images: {
-    unoptimized: true,
+    domains: ["doctalkhealth.com"],
   },
-  basePath: "",
-  assetPrefix: "",
-  // Enable middleware for static exports
-  skipMiddlewareUrlNormalize: true,
-  skipTrailingSlashRedirect: true,
 };
 
 module.exports = nextConfig;
