@@ -282,7 +282,7 @@ export default function MobileLayout() {
           </div>
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
+              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
               color: "white",
               padding: "1rem",
               borderRadius: "1rem",
@@ -323,7 +323,7 @@ export default function MobileLayout() {
           </div>
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
+              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
               color: "white",
               padding: "1rem",
               borderRadius: "1rem",
@@ -363,7 +363,7 @@ export default function MobileLayout() {
           </div>
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
+              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
               color: "white",
               padding: "1rem",
               borderRadius: "1rem",
