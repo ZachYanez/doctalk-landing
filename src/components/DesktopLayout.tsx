@@ -186,20 +186,21 @@ export default function DesktopLayout() {
               UNDERSTAND ANY MEDICAL DOCUMENT
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Upload lab results, diagnosis reports, treatment plans, and
-              medical records
+              • Snap & Decode: Take a photo or upload PDFs of lab results,
+              prescriptions, and medical reports for instant AI-powered
+              explanations
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Get clear, conversational explanations of complex medical
-              terminology
+              • Plain English Translation: Transform complex medical jargon into
+              clear, conversational language you can actually understand
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Receive instant insights broken down into easy-to-understand
-              language
+              • Smart Document Analysis: Advanced AI breaks down diagnoses,
+              treatment plans, and test results into digestible insights
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Support for PDF documents, photos of printed documents, and
-              direct camera captures
+              • Multi-Format Support: Works with photos, PDFs, printed
+              documents, and direct camera captures - no formatting hassles
             </p>
           </div>
           <div
@@ -230,17 +231,20 @@ export default function DesktopLayout() {
               INTERACTIVE HEALTH CONVERSATIONS
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Ask follow-up questions about any part of your medical documents
+              • Ask Anything Follow-Up: Dive deeper with unlimited questions
+              about your medical documents and get personalized explanations
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Get detailed explanations of medical terms, procedures, and
-              diagnoses
+              • What-If Explorer: Explore treatment options, understand side
+              effects, and discuss potential interactions in real-time
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Explore &ldquo;what-if&rdquo; scenarios and treatment options
+              • Context-Aware Chat: AI remembers your entire conversation and
+              document history for more relevant, connected responses
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Understand potential side effects and interactions
+              • Voice-Enabled Discussions: Listen to AI responses with premium
+              text-to-speech for hands-free health conversations
             </p>
           </div>
           <div
@@ -271,13 +275,20 @@ export default function DesktopLayout() {
               COMPREHENSIVE HEALTH KNOWLEDGE
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Ask general health questions beyond your documents
+              • Beyond Your Documents: Ask general health questions and get
+              evidence-based answers from a vast medical knowledge base
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Access a wide range of health topics and information
+              • Always Up-to-Date: Access the latest health information, medical
+              research, and treatment guidelines in real-time
+            </p>
+            <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
+              • Multilingual Support: Get health insights in your preferred
+              language for better understanding and accessibility
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Stay informed with the latest health news and updates
+              • Citation-Backed Answers: Every response includes credible
+              medical sources so you can verify and learn more
             </p>
           </div>
           <div
@@ -308,17 +319,22 @@ export default function DesktopLayout() {
               ADVANCED RESEARCH MODE
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Toggle on Advanced Mode for deeper medical insights
+              • Deep Medical Insights: Toggle on Premium mode for detailed
+              scientific explanations with research citations and clinical
+              context
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Access detailed scientific explanations and research citations
+              • Latest Studies Access: Explore cutting-edge medical research and
+              clinical trials relevant to your specific health conditions
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Explore related medical studies and clinical trials
+              • Professional-Grade Analysis: Get detailed, comprehensive
+              analysis similar to what&apos;s used in medical settings for
+              informed discussions
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Understand the latest medical research relevant to your
-              condition
+              • Evidence-Based Recommendations: Understand the science behind
+              treatments with links to peer-reviewed medical literature
             </p>
           </div>
           <div
@@ -349,16 +365,20 @@ export default function DesktopLayout() {
               USER-FRIENDLY FEATURES
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Intuitive interface designed for all age groups
+              • Intuitive Design: Clean, accessible interface designed for all
+              ages with large font options and dark mode support
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Secure document storage and easy access to past conversations
+              • Conversation Archive: Save important health discussions and
+              easily access your complete medical conversation history
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Dark mode support for comfortable reading
+              • Smart File Management: Automatic document organization with
+              secure cloud storage and easy retrieval
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Quick document scanning and processing
+              • Seamless Experience: Fast document processing, progress
+              tracking, and smooth navigation across all app features
             </p>
           </div>
           <div
@@ -389,19 +409,20 @@ export default function DesktopLayout() {
               PRIVACY & SECURITY
             </h3>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Secure Transmission: Data encrypted in transit using HTTPS.
+              • Bank-Level Encryption: Your health data is protected with
+              enterprise-grade encryption both in transit and at rest
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Encrypted Storage: Your documents & conversations stored with
-              strong encryption at rest.
+              • Zero Data Sharing: Your medical information stays private - we
+              never share data with third parties or advertisers
             </p>
             <p style={{ fontSize: "1rem", marginBottom: "1rem" }}>
-              • Strict Access Controls: Internal access to your data is strictly
-              limited.
+              • Secure Cloud Storage: Built on trusted infrastructure with
+              strict access controls and regular security audits
             </p>
             <p style={{ fontSize: "1rem" }}>
-              • Secure Infrastructure: Built on reputable cloud hosting and
-              storage providers.
+              • HIPAA-Conscious Design: Privacy-first architecture ensures your
+              sensitive health information remains confidential and secure
             </p>
           </div>
         </div>
