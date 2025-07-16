@@ -65,9 +65,6 @@ export default function ResetPasswordDesktopLayout({
       const apiBaseUrl =
         process.env.NEXT_PUBLIC_API_BASE_URL ||
         "https://doctalk-backend-366f81fc2e1d.herokuapp.com";
-      if (!apiBaseUrl) {
-        throw new Error("API base URL not configured");
-      }
 
       const response = await fetch(`${apiBaseUrl}/auth/reset-password`, {
         method: "POST",
