@@ -9,169 +9,298 @@ export default function MobileLayout() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
         minHeight: "100vh",
         background:
           "linear-gradient(to bottom, black, #11182A, #03045e, #0077B6)",
       }}
     >
       {/* Hero Section */}
-      <section style={{ textAlign: "center", padding: "2rem 0" }}>
-        <div style={{ marginBottom: "1rem" }}>
+      <section
+        style={{
+          textAlign: "center",
+          padding: "3rem 1.5rem 2rem 1.5rem",
+          width: "100%",
+        }}
+      >
+        <div style={{ marginBottom: "2rem" }}>
           <Image
-            src="/images/doctor.png"
-            alt="Friendly doctor cartoon"
-            width={80}
-            height={80}
-            style={{ display: "block", margin: "0 auto" }}
+            src="/images/3DDoctor.png"
+            alt="DocTalk AI Assistant"
+            width={120}
+            height={120}
+            style={{ display: "block", margin: "0 auto", objectFit: "contain" }}
             priority
           />
         </div>
+
         <h1
           style={{
-            fontSize: "2rem",
-            fontFamily: "serif",
+            fontSize: "2.5rem",
+            fontWeight: "700",
             color: "white",
-            marginBottom: "0.5rem",
+            marginBottom: "1rem",
+            letterSpacing: "-0.02em",
+            lineHeight: "1.1",
           }}
         >
           <span style={{ color: "#FF4444" }}>Doc</span>
           <span style={{ color: "#0077B6" }}>Talk</span>
         </h1>
+
+        <p
+          style={{
+            fontSize: "1.25rem",
+            color: "white",
+            maxWidth: "90%",
+            margin: "0 auto 0.75rem",
+            fontWeight: "500",
+            opacity: "0.95",
+            lineHeight: "1.3",
+          }}
+        >
+          Understand Your Medical Documents in Seconds
+        </p>
+
         <p
           style={{
             fontSize: "1rem",
             color: "white",
-            maxWidth: "20rem",
-            margin: "0 auto",
+            maxWidth: "85%",
+            margin: "0 auto 2rem",
+            opacity: "0.8",
+            lineHeight: "1.5",
           }}
         >
-          Your AI-powered medical assistant here to answer your questions about
-          medical documents, reports, and treatment plans
+          AI-powered insights that transform complex medical reports into clear
+          information
         </p>
-        <div style={{ marginTop: "1rem" }}>
+
+        <div style={{ marginBottom: "2rem" }}>
           <Image
             src="/images/appStoreIcon.svg"
             alt="Download on App Store"
-            width={90}
-            height={24}
+            width={160}
+            height={48}
             style={{
               display: "block",
               margin: "0 auto",
               cursor: "pointer",
-              transition: "opacity 0.3s",
-              opacity: "0.8",
             }}
             priority
           />
         </div>
-      </section>
 
-      {/* Image Flow Section */}
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "2rem",
-          padding: "2rem 0",
-        }}
-      >
+        {/* Trust Indicators */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            gap: "0.75rem",
+            color: "white",
+            fontSize: "0.875rem",
+            opacity: "0.7",
           }}
         >
-          <p
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: "500",
-              color: "white",
-              marginBottom: "0.5rem",
-            }}
-          >
-            Step 1: Take a Picture or Upload Photo
-          </p>
+          <span>🔒 Bank-Level Encryption</span>
+          <span>⚡ Instant Analysis</span>
+          <span>🏥 Medical-Grade AI</span>
+        </div>
+      </section>
+
+      {/* How It Works - Mobile */}
+      <section
+        style={{
+          width: "100%",
+          padding: "2rem 1.5rem",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "1.75rem",
+            fontWeight: "600",
+            color: "white",
+            textAlign: "center",
+            marginBottom: "2rem",
+            opacity: "0.95",
+          }}
+        >
+          How It Works
+        </h2>
+
+        {/* Step 1 */}
+        <div style={{ marginBottom: "3rem" }}>
           <div
-            style={{ width: "15rem", height: "20rem", position: "relative" }}
+            style={{
+              width: "280px",
+              height: "360px",
+              position: "relative",
+              margin: "0 auto 1.5rem",
+              borderRadius: "1rem",
+              overflow: "hidden",
+              boxShadow: "0 15px 30px rgba(0,0,0,0.3)",
+            }}
           >
             <Image
               src="/images/resultScan.png"
-              alt="Medical result scan"
+              alt="Upload medical documents"
               layout="fill"
-              style={{
-                borderRadius: "0.5rem",
-                objectFit: "cover",
-                border: "1px solid #e5e5e5",
-              }}
+              style={{ objectFit: "cover" }}
               priority
             />
           </div>
+
+          <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "0.5rem",
+                color: "#0077B6",
+                fontWeight: "700",
+              }}
+            >
+              01
+            </div>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Upload Any Medical Document
+            </h3>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+                maxWidth: "90%",
+                margin: "0 auto",
+              }}
+            >
+              Snap a photo or upload PDFs of lab results, prescriptions, or
+              medical reports. Our AI instantly processes any format.
+            </p>
+          </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <p
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: "500",
-              color: "white",
-              marginBottom: "0.5rem",
-            }}
-          >
-            Step 2: Begin Your Conversation
-          </p>
+
+        {/* Step 2 */}
+        <div>
           <div
-            style={{ width: "15rem", height: "20rem", position: "relative" }}
+            style={{
+              width: "280px",
+              height: "360px",
+              position: "relative",
+              margin: "0 auto 1.5rem",
+              borderRadius: "1rem",
+              overflow: "hidden",
+              boxShadow: "0 15px 30px rgba(0,0,0,0.3)",
+            }}
           >
             <Image
               src="/images/conversationImage.png"
-              alt="AI conversation"
+              alt="AI conversation interface"
               layout="fill"
-              style={{
-                borderRadius: "0.5rem",
-                objectFit: "cover",
-                border: "1px solid #e5e5e5",
-              }}
+              style={{ objectFit: "cover" }}
               priority
             />
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "0.5rem",
+                color: "#0077B6",
+                fontWeight: "700",
+              }}
+            >
+              02
+            </div>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Get Instant Clarity
+            </h3>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+                maxWidth: "90%",
+                margin: "0 auto",
+              }}
+            >
+              Ask questions in plain English and receive clear explanations. Our
+              AI provides personalized insights with every question.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section style={{ padding: "2rem 0" }}>
-        <div
+      {/* Key Features - Mobile Grid */}
+      <section
+        style={{
+          width: "100%",
+          padding: "2rem 1.5rem",
+        }}
+      >
+        <h2
           style={{
-            maxWidth: "20rem",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "1rem",
-            padding: "0 1rem",
-            marginBottom: "30px",
+            fontSize: "1.75rem",
+            fontWeight: "600",
+            color: "white",
+            textAlign: "center",
+            marginBottom: "0.75rem",
+            opacity: "0.95",
           }}
         >
+          Everything You Need
+        </h2>
+        <p
+          style={{
+            fontSize: "1rem",
+            color: "white",
+            textAlign: "center",
+            marginBottom: "2rem",
+            opacity: "0.7",
+            maxWidth: "85%",
+            margin: "0 auto 2rem",
+          }}
+        >
+          Powerful features for your peace of mind
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.5rem",
+          }}
+        >
+          {/* Feature 1 */}
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
-              color: "white",
-              padding: "1rem",
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
               borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
             }}
           >
             <div
               style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
+                fontSize: "2rem",
+                marginBottom: "1rem",
               }}
             >
               🔍
@@ -179,222 +308,81 @@ export default function MobileLayout() {
             <h3
               style={{
                 fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
               }}
             >
-              UNDERSTAND ANY MEDICAL DOCUMENT
+              Instant Understanding
             </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Snap & Decode: Take a photo or upload PDFs of lab results,
-              prescriptions, and medical reports for instant AI-powered
-              explanations
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Plain English Translation: Transform complex medical jargon into
-              clear, conversational language you can actually understand
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Smart Document Analysis: Advanced AI breaks down diagnoses,
-              treatment plans, and test results into digestible insights
-            </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • Multi-Format Support: Works with photos, PDFs, printed
-              documents, and direct camera captures - no formatting hassles
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Transform medical jargon into clear language tailored to your
+              understanding.
             </p>
           </div>
+
+          {/* Feature 2 */}
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
-              color: "white",
-              padding: "1rem",
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
               borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
             }}
           >
             <div
               style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
+                fontSize: "2rem",
+                marginBottom: "1rem",
               }}
             >
-              💡
+              💬
             </div>
             <h3
               style={{
                 fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
               }}
             >
-              INTERACTIVE HEALTH CONVERSATIONS
+              Ask Anything
             </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Ask Anything Follow-Up: Dive deeper with unlimited questions
-              about your medical documents and get personalized explanations
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • What-If Explorer: Explore treatment options, understand side
-              effects, and discuss potential interactions in real-time
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Context-Aware Chat: AI remembers your entire conversation and
-              document history for more relevant, connected responses
-            </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • Voice-Enabled Discussions: Listen to AI responses with premium
-              text-to-speech for hands-free health conversations
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Dive deeper with unlimited questions. Get personalized insights
+              about your health.
             </p>
           </div>
+
+          {/* Feature 3 */}
           <div
             style={{
-              background: "linear-gradient(to bottom, #0b1a4a, #1a3b6b)",
-              color: "white",
-              padding: "1rem",
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
               borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
             }}
           >
             <div
               style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
-              }}
-            >
-              📚
-            </div>
-            <h3
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
-              }}
-            >
-              COMPREHENSIVE HEALTH KNOWLEDGE
-            </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Beyond Your Documents: Ask general health questions and get
-              evidence-based answers from a vast medical knowledge base
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Always Up-to-Date: Access the latest health information, medical
-              research, and treatment guidelines in real-time
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Multilingual Support: Get health insights in your preferred
-              language for better understanding and accessibility
-            </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • Citation-Backed Answers: Every response includes credible
-              medical sources so you can verify and learn more
-            </p>
-          </div>
-          <div
-            style={{
-              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
-              color: "white",
-              padding: "1rem",
-              borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
-              }}
-            >
-              🎯
-            </div>
-            <h3
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
-              }}
-            >
-              ADVANCED RESEARCH MODE
-            </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Deep Medical Insights: Toggle on Premium mode for detailed
-              scientific explanations with research citations and clinical
-              context
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Latest Studies Access: Explore cutting-edge medical research and
-              clinical trials relevant to your specific health conditions
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Professional-Grade Analysis: Get detailed, comprehensive
-              analysis similar to what&apos;s used in medical settings for
-              informed discussions
-            </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • Evidence-Based Recommendations: Understand the science behind
-              treatments with links to peer-reviewed medical literature
-            </p>
-          </div>
-          <div
-            style={{
-              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
-              color: "white",
-              padding: "1rem",
-              borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
-              }}
-            >
-              📱
-            </div>
-            <h3
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
-              }}
-            >
-              USER-FRIENDLY FEATURES
-            </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Intuitive Design: Clean, accessible interface designed for all
-              ages with large font options and dark mode support
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Conversation Archive: Save important health discussions and
-              easily access your complete medical conversation history
-            </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Smart File Management: Automatic document organization with
-              secure cloud storage and easy retrieval
-            </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • Seamless Experience: Fast document processing, progress
-              tracking, and smooth navigation across all app features
-            </p>
-          </div>
-          <div
-            style={{
-              background: "linear-gradient(to bottom, #1a3b6b, #0b1a4a)",
-              color: "white",
-              padding: "1rem",
-              borderRadius: "1rem",
-              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "1.5rem",
-                marginBottom: "0.5rem",
-                textAlign: "center",
+                fontSize: "2rem",
+                marginBottom: "1rem",
               }}
             >
               🔒
@@ -402,48 +390,210 @@ export default function MobileLayout() {
             <h3
               style={{
                 fontSize: "1.25rem",
-                fontWeight: "bold",
-                marginBottom: "0.5rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
               }}
             >
-              PRIVACY & SECURITY
+              Complete Privacy
             </h3>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Bank-Level Encryption: Your health data is protected with
-              enterprise-grade encryption both in transit and at rest
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Your health data stays yours. Bank-level encryption and zero data
+              sharing.
             </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Zero Data Sharing: Your medical information stays private - we
-              never share data with third parties or advertisers
+          </div>
+
+          {/* Feature 4 */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
+              borderRadius: "1rem",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "1rem",
+              }}
+            >
+              🎯
+            </div>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Research Mode
+            </h3>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Access medical research and evidence-based insights with trusted
+              citations.
             </p>
-            <p style={{ fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-              • Secure Cloud Storage: Built on trusted infrastructure with
-              strict access controls and regular security audits
+          </div>
+
+          {/* Feature 5 */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
+              borderRadius: "1rem",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "1rem",
+              }}
+            >
+              📱
+            </div>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Always Accessible
+            </h3>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Save conversations and access your health insights anytime,
+              anywhere.
             </p>
-            <p style={{ fontSize: "0.875rem" }}>
-              • HIPAA-Conscious Design: Privacy-first architecture ensures your
-              sensitive health information remains confidential and secure
+          </div>
+
+          {/* Feature 6 */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(10px)",
+              padding: "1.75rem",
+              borderRadius: "1rem",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "2rem",
+                marginBottom: "1rem",
+              }}
+            >
+              🌐
+            </div>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                color: "white",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Multi-Language
+            </h3>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "white",
+                opacity: "0.8",
+                lineHeight: "1.5",
+              }}
+            >
+              Get health insights in your preferred language for better
+              understanding.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Footer Section */}
+      {/* Social Proof Section - Mobile */}
+      <section
+        style={{
+          width: "100%",
+          padding: "2rem 1.5rem",
+        }}
+      >
+        <div
+          style={{
+            background: "rgba(255, 255, 255, 0.05)",
+            backdropFilter: "blur(10px)",
+            padding: "2rem 1.5rem",
+            borderRadius: "1rem",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "1.125rem",
+              color: "white",
+              fontStyle: "italic",
+              marginBottom: "1.5rem",
+              lineHeight: "1.5",
+              opacity: "0.9",
+            }}
+          >
+            "DocTalk transformed how I understand my health. What used to be
+            confusing medical reports are now clear conversations."
+          </p>
+          <p
+            style={{
+              fontSize: "0.875rem",
+              color: "white",
+              opacity: "0.7",
+            }}
+          >
+            — Sarah M., DocTalk User
+          </p>
+        </div>
+      </section>
+
+      {/* Footer CTA Section - Mobile */}
       <footer
         style={{
-          padding: "1rem 30px",
-          backgroundColor: "#001f3f",
+          padding: "2rem 1.5rem",
+          backgroundColor: "rgba(0, 31, 63, 0.5)",
+          backdropFilter: "blur(10px)",
           borderRadius: "1rem",
-          border: "2px solid white",
-          marginTop: "80px",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          margin: "2rem 1.5rem 3rem 1.5rem",
+          width: "calc(100% - 3rem)",
         }}
       >
         <div style={{ textAlign: "center" }}>
           <h2
             style={{
-              fontSize: "1.5rem",
-              fontWeight: "500",
-              marginBottom: "0.5rem",
+              fontSize: "1.75rem",
+              fontWeight: "600",
+              marginBottom: "0.75rem",
               color: "white",
             }}
           >
@@ -452,43 +602,43 @@ export default function MobileLayout() {
           </h2>
           <p
             style={{
-              fontSize: "0.875rem",
-              marginBottom: "0.5rem",
+              fontSize: "1rem",
+              marginBottom: "1.5rem",
               color: "white",
+              opacity: "0.8",
             }}
           >
             Understand your health one conversation at a time
           </p>
           <div
             style={{
-              cursor: "pointer",
-              transition: "opacity 0.3s",
-              opacity: "0.8",
-              marginBottom: "0.5rem",
+              marginBottom: "1.5rem",
             }}
           >
             <Image
               src="/images/appStoreIcon.svg"
               alt="Download on App Store"
-              width={90}
-              height={24}
-              style={{ display: "block", margin: "0 auto" }}
+              width={160}
+              height={48}
+              style={{
+                display: "block",
+                margin: "0 auto",
+                cursor: "pointer",
+              }}
               priority
             />
           </div>
-          <p style={{ fontSize: "0.75rem", color: "white" }}>
-            If you have any questions, please email:{" "}
+          <p style={{ fontSize: "0.8rem", color: "white", opacity: "0.6" }}>
+            Questions? Email us at{" "}
             <a
               href="mailto:doctalk@zymgmtco.com"
-              style={{ color: "#0077B6", textDecoration: "underline" }}
+              style={{ color: "#0077B6", textDecoration: "none" }}
             >
               doctalk@zymgmtco.com
             </a>
           </p>
         </div>
       </footer>
-
-      <div style={{ paddingBottom: "80px" }}></div>
     </div>
   );
 }
