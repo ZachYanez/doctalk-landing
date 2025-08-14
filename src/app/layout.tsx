@@ -33,12 +33,21 @@ export default function RootLayout({
             color: "white",
           }}
         >
-          <p style={{ fontSize: "0.875rem" }}>
+          <p style={{ fontSize: "0.875rem", display: "flex", gap: "1rem", justifyContent: "center" }}>
             <a
               href="/privacy-policy"
               style={{ color: "#0077B6", textDecoration: "underline" }}
             >
               Privacy Policy
+            </a>
+            <span aria-hidden="true" style={{ opacity: 0.6 }}>
+              •
+            </span>
+            <a
+              href="/terms-of-service"
+              style={{ color: "#0077B6", textDecoration: "underline" }}
+            >
+              Terms of Service
             </a>
           </p>
         </footer>
