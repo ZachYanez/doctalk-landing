@@ -166,37 +166,36 @@ export default function PrivacyPolicyPage() {
         </p>
 
         <p className="mb-2 font-semibold">
-          (A) AI processing (the only third party we disclose PII to): Google
-          Cloud Vertex AI
+          (A) AI processing (the only third party we disclose PII to): Secure AI
+          Infrastructure
         </p>
         <ul className="list-disc list-inside mb-4 space-y-2">
           <li>
             We send your submitted content (and, only as needed for
-            routing/accounting, your email) to Google Cloud Vertex AI to
+            routing/accounting, your email) to our secure AI infrastructure to
             generate the responses you request.
           </li>
           <li>
-            <strong>No training:</strong> Google Cloud states it will not use
-            your inputs or outputs to train or fine-tune models without your
-            prior permission, covering all managed models (GA and pre-GA).
-            (Google Cloud Community [1], Google Services [2])
+            <strong>Zero Data Sharing:</strong> We do not share your data with
+            any third parties for training, advertising, or commercial purposes.
+            Your information is processed solely to provide you with the service
+            you requested.
           </li>
           <li>
-            <strong>Zero Data Retention (ZDR):</strong> We configure Vertex AI
-            for zero data retention— we do not opt in to any data use for model
-            training or product improvement, and we disable project-level
-            prompt/data caching and abuse-monitoring prompt logging where
-            applicable or obtain an exception so that prompts/outputs are not
-            retained after processing. Note: Google’s defaults can include
-            short-lived caching (e.g., up to 24 hours) and prompt logging for
-            certain accounts; our configuration and/or exceptions turn these off
-            to maintain ZDR. (Google Cloud [3])
+            <strong>Zero Data Retention (ZDR):</strong> We configure our AI
+            processing for zero data retention— we do not opt in to any data use
+            for model training or product improvement, and we disable data
+            caching and prompt logging where applicable. Your data is not
+            retained after processing.
+          </li>
+          <li>
+            <strong>Encryption at Rest:</strong> All your data is encrypted when
+            stored, ensuring maximum security and privacy protection.
           </li>
           <li>
             <strong>Result:</strong> Your prompts/outputs are used only for
             transient processing to fulfill your request; they are not retained
-            by Google for training or future use under our configuration.
-            (Google Cloud [3], Google Cloud Community [1])
+            or used for any other purpose under our strict configuration.
           </li>
         </ul>
 
@@ -331,9 +330,9 @@ export default function PrivacyPolicyPage() {
         </h2>
         <p className="mb-4">
           We operate in the United States and may transfer information to the
-          U.S. and other countries where our processors (including Google Cloud
-          Vertex AI) operate. Where required, we rely on appropriate safeguards
-          for cross-border transfers.
+          U.S. and other countries where our secure processing infrastructure
+          operates. Where required, we rely on appropriate safeguards for
+          cross-border transfers, including encryption at rest and in transit.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-3">

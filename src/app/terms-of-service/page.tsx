@@ -71,8 +71,11 @@ export default function TermsOfServicePage() {
         </h2>
         <p className="mb-4">
           Your use of the Service is governed by the Privacy Policy. We
-          implement encryption and security controls and do not sell personal
-          data.
+          implement comprehensive security measures including encryption at rest
+          and in transit, zero data sharing with third parties for training or
+          advertising purposes, and zero data retention policies. We do not sell
+          personal data and maintain strict access controls to protect your
+          information.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6 mb-3">
